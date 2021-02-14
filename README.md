@@ -1,8 +1,8 @@
 # DCC012AtividadePratica01
-DCC012 Atividade Pratica 01
-Para rodar
-  ->MAC/LINUX:  clear && g++ -std=c++11 *.h *.cpp -o main && ./main
-  ->WINDOWS:    cls & g++ -std=c++11 *.h *.cpp -o main & main.exe
+
+*Para rodar
+  **->MAC/LINUX:  clear && g++ -std=c++11 *.h *.cpp -o main && ./main
+  **->WINDOWS:    cls & g++ -std=c++11 *.h *.cpp -o main & main.exe
   
 # Referências
 
