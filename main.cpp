@@ -99,7 +99,7 @@ void segundaForma(int tamanhoDosBaldes, int nbits)
     if(escolha == 1)
     {
         //Bits aletorio;
-        for(int j=0; j<10; j++)
+        for(int j=0; j<tamanhoDosBaldes; j++)
         {
             for(int i=0; i<nbits; i++)
             {
