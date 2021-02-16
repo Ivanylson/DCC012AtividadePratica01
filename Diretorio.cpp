@@ -176,6 +176,18 @@ void Diretorio::imprimeDiretorioAleatorio()
     }
 }
 
+int Diretorio::calculaNumBaldes()
+{
+    int nBaldes = 1;
+    for(int i = 1; i < this->conjuntoDeBaldesAleatorios.size(); i++)
+    {
+        if(this->conjuntoDeBaldesAleatorios[i] != this->conjuntoDeBaldesAleatorios[i-1])
+        {
+            nBaldes++;
+        }
+    }
+    return nBaldes;
+}
 /****/
 
 void Diretorio::inserirChave(string chave)

@@ -56,6 +56,7 @@ class Diretorio{
         Diretorio(int numeroDeBits, int tamanhoM); /**1 e 2**/
         ///Aleatorio
         int getTamanhoDiretorio();/**1**/
+        int calculaNumBaldes();
         void inserePseudoChave(string pseudoChave);/**1**/
         bool buscaPseudoChave(string pseudoChave);/**1**/
         void divideBaldesPseudoChave(int indiceDoBalde);/**1**/

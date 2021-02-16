@@ -30,6 +30,7 @@
 #include <time.h>
 #include <sstream>
 #include <cstdlib>
+#include <iomanip>
 
 /**Classes**/
 #include "Diretorio.h"
@@ -68,21 +69,32 @@ void primeiraForma(int tamMB, int nBits)
         {
             pseudoChave.push_back(random() % 2 + '0');
         }
-        if(!dir->buscaPseudoChave(pseudoChave))
+        bool existe = dir->buscaPseudoChave(pseudoChave);
+        cout << "Busca: " << existe << endl;
+        if(!existe)
         {
             dir->inserePseudoChave(pseudoChave);
         }
         else
         {
+            cout << "nao inseriu: " << naoInseridos << endl;
             naoInseridos++;
         }
+
         pseudoChave.erase(pseudoChave.begin(),pseudoChave.end());
     }
 
 
     dir->imprimeDiretorioAleatorio();
     cout << "Não inseridos: " << naoInseridos << endl;
+    int a = nInsercoes - naoInseridos;
+    int b = dir->calculaNumBaldes() * tamMB;
+    double fatorCarga = double(a)/double(b);
+    cout << "Fator de Carga: " << fixed << setprecision(4) << fatorCarga << endl;
+    cout << "Tamanho Diretório: " << dir->getTamanhoDiretorio() << endl;
+    cout << "Número de Baldes: " << dir->calculaNumBaldes() << endl;
 }
+
 
 void segundaForma(int tamanhoDosBaldes, int nbits)
 {
